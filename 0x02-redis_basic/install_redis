@@ -1,0 +1,11 @@
+
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get -y install redis-server
+pip3 install redis
+sudo sed -i "s/bind .*/bind 127.0.0.1/g" /etc/redis/redis.conf
+sudo cp /etc/redis/redis.conf /etc/redis/redis.conf.default
+sudo service redis-server start 
+sudo service redis-server enable
+sudo service redis-server status 
